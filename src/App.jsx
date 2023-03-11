@@ -7,6 +7,8 @@ import Shop from './pages/Shop/Shop';
 import Cart from './pages/Cart/Cart';
 import Favorites from './pages/Favorites/Favorites';
 import NotFound from './pages/NotFound/NotFound';
+//bootstrap style
+import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
   return (
