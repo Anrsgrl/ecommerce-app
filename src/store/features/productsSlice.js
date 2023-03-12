@@ -8,8 +8,8 @@ const initialState = {
     error: '',
 }
 
-export const fetchProducts = createAsyncThunk('product/fetchProducts', () => {
-    return axios.get(BASE_URL).then((res) => res.data)
+export const fetchProducts = createAsyncThunk('product/fetchProducts', (category) => {
+    return axios.get(category !== '' ? `${BASE_URL}/category/${category}` : BASE_URL).then((res) => res.data)
 })
 
 const productSlice = createSlice({
