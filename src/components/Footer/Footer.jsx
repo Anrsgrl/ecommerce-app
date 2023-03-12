@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import './footer.scss';
 
 const Footer = () => {
     return (
-        <footer>hi</footer>
+        <footer>
+            <span>Made by</span>
+            <span style={{ cursor: "pointer", color: "#009e66" }} onClick={() => { window.open("https://github.com/Anrsgrl") }}>Anrsgrl</span>
+        </footer>
     )
 }
 
-export default Footer
+export default Footer;
