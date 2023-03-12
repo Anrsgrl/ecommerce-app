@@ -69,12 +69,12 @@ header {
                 transition: all 500ms ease;
 
                 @media(min-width: 767px) {
-                    border-left: 2px solid $p-gray;
+                    border-left: 1px solid $medium-gray;
                     padding-left: 10px;
                 }
 
                 @media(max-width: 767px) {
-                    border-right: 2px solid $p-gray;
+                    border-right: 1px solid $medium-gray;
                     padding-right: 13px;
                 }
 

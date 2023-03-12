@@ -13,7 +13,7 @@ body {
   padding: 0;
   font-family: $main-font !important;
   background-color: $main-gray !important;
-  color: white !important;
+  color: $bold-gray !important;
 }
 
 .container {
@@ -26,5 +26,19 @@ main {
 
   @media(max-width: 767px) {
     padding-top: 40px;
+  }
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: calc(100% - 30px);
+
+  @media(max-width: 991px) {
+    max-width: 768px;
+  }
+
+  @media(max-width: 767px) {
+    max-width: 576px;
   }
 }
