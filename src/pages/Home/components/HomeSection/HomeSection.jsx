@@ -10,7 +10,7 @@ const HomeSection = (props) => {
                     <div className="col-7 col-md-4 product-image">
                         <img src={img} alt="" />
                     </div>
-                    <div className="col-12 col-md-8 product-title text-center text-md-start p-0 pe-md-5">
+                    <div className="col-12 col-md-8 product-title text-center text-md-start p-0 px-md-5">
                         <h4>{title}</h4>
                         <span>
                             {content}
