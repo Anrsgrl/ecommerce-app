@@ -8,7 +8,6 @@ const Shop = () => {
     const products = useSelector((state) => state.products)
     const dispatch = useDispatch()
     const [category, setCategory] = useState('')
-    console.log(category)
     useEffect(() => {
         dispatch(fetchProducts(category))
     }, [category, dispatch])
@@ -38,7 +37,7 @@ const Shop = () => {
                             transition={{ duration: 0.4 }} layout layoutRoot className="row">
                             {
                                 products.products.map((product) => (
-                                    <ProductCard keey={product.id} image={product.image} title={product.title} category={product.category} price={product.price} />
+                                    <ProductCard product={product} keey={product.id} image={product.image} title={product.title} category={product.category} price={product.price} />
                                 ))
                             }
                         </motion.div>) : null}
