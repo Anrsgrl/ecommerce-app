@@ -4,10 +4,13 @@ import logo from "../../assets/images/logoDark.png";
 import { NavLink } from 'react-router-dom';
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { CiMenuFries } from "react-icons/ci";
+import { useSelector } from 'react-redux';
 
 const Header = () => {
     const [hamburger, setHamburger] = useState(false);
     const [headerColor, setHeaderColor] = useState(false);
+    const cart = useSelector((state) => state.cart)
+    console.log(cart.cart)
     const changeColor = () => {
         setHamburger(false)
         if (window.scrollY >= 96) {
@@ -17,6 +20,13 @@ const Header = () => {
         }
     };
     window.addEventListener('scroll', changeColor);
+    const getTotalQuantity = () => {
+        let total = 0;
+        cart.cart.forEach((item) => {
+            total += item.quantity;
+        });
+        return total;
+    };
     return (
         <header className={headerColor ? "scroll-header" : ""}>
             <div className="header-content">
@@ -32,7 +42,7 @@ const Header = () => {
                     <div className="icon-part">
                         <NavLink to="/cart">
                             <AiOutlineShoppingCart />
-                            <span className='cart-quantity'>12</span>
+                            <span className='cart-quantity'>{getTotalQuantity()}</span>
                         </NavLink>
                     </div>
                     <div className="hamburger-menu">
