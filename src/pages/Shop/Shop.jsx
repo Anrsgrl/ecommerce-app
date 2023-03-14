@@ -24,7 +24,7 @@ const Shop = () => {
                         <option value="jewelery">Jewelery</option>
                     </select>
                 </div>
-                {products.loading && <div className="spinner-border" role="status">
+                {products.loading && <div style={{ color: "#00ACC1" }} className="spinner-border" role="status">
                     <span className="sr-only"></span>
                 </div>}
                 {!products.loading && products.error ? <div className='alert alert-danger'>Error: {products.error}</div> : ""}
