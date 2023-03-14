@@ -173,6 +173,7 @@ header {
 
             .active {
                 color: $main-cyan !important;
+                transition: all 200ms ease;
             }
         }
     }

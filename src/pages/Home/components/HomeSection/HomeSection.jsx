@@ -17,7 +17,7 @@ const HomeSection = (props) => {
                         <span className='text-muted'>
                             {content}
                         </span>
-                        <button onClick={() => navigate('/shop')}>{button}</button>
+                        <button className='home-button' onClick={() => navigate('/shop')}>{button}</button>
                     </div>
                 </div>
             </div>

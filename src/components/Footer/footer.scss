@@ -15,7 +15,13 @@ footer {
     }
 
     span:nth-child(2) {
-        color: $cyan700 !important;
+        color: $cyan700;
+        cursor: pointer;
         margin-left: 5px;
+        transition: all 500ms ease;
+
+        &:hover {
+            color: $cyan600 !important;
+        }
     }
 }

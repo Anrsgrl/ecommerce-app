@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer>
             <span>Made by</span>
-            <span style={{ cursor: "pointer", color: "#009e66" }} onClick={() => { window.open("https://github.com/Anrsgrl") }}>Anrsgrl</span>
+            <span onClick={() => { window.open("https://github.com/Anrsgrl") }}>Anrsgrl</span>
         </footer>
     )
 }
