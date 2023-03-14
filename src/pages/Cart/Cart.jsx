@@ -31,27 +31,27 @@ const Cart = () => {
                         <button className='btn' style={{ width: "170px", color: "#00ACC1" }} onClick={() => navigate("/shop")}> <IoMdReturnLeft /> Return to shop</button>
                         <span className='p-1' style={{ color: "#0097A7" }}>{getTotalQuantity()} items in your cart</span>
                         {cart.map((item) => (
-                            <div class="card mb-3">
-                                <div class="card-body">
-                                    <div class="d-flex flex-column flex-sm-row justify-content-between">
-                                        <div class="d-flex flex-row align-items-center">
+                            <div key={item.id} className="card mb-3">
+                                <div className="card-body">
+                                    <div className="d-flex flex-column flex-sm-row justify-content-between">
+                                        <div className="d-flex flex-row align-items-center">
                                             <div>
                                                 <img
                                                     src={item.image}
-                                                    class="img-fluid rounded-3" alt="Shopping item" style={{ width: "65px" }} />
+                                                    className="img-fluid rounded-3" alt="Shopping item" style={{ width: "65px" }} />
                                             </div>
-                                            <div class="ms-3 w-100 w-sm-50">
+                                            <div className="ms-3 w-100 w-sm-50">
                                                 <h5>{item.title} </h5>
                                             </div>
                                         </div>
-                                        <div class="d-flex text-center flex-row align-items-center pt-2 pt-sm-0">
+                                        <div className="d-flex text-center flex-row align-items-center pt-2 pt-sm-0">
                                             <div className='d-flex align-items-center justify-content-around' style={{ width: "100px" }}>
                                                 <button className='cart-btn btn btn-success' onClick={() => dispatch(incrementQuantity(item.id))}>+</button>
-                                                <h5 class="fw-normal mb-0">{item.quantity}</h5>
+                                                <h5 className="fw-normal mb-0">{item.quantity}</h5>
                                                 <button className='cart-btn btn btn-primary' onClick={() => dispatch(decrementQuantity(item.id))}>-</button>
                                             </div>
                                             <div style={{ width: "80px" }}>
-                                                <h5 class="mb-0">${Math.round(item.price)}</h5>
+                                                <h5 className="mb-0">${Math.round(item.price)}</h5>
                                             </div>
                                             <button className='cart-btn btn btn-danger' onClick={() => dispatch(removeItem(item.id))}><IoMdTrash /></button>
                                         </div>

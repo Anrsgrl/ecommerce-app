@@ -1,8 +1,10 @@
 import React from 'react';
 import "./homeSection.scss";
+import { useNavigate } from 'react-router-dom';
 
 const HomeSection = (props) => {
     const { reverse, bg, img, title, content, button } = props;
+    const navigate = useNavigate();
     return (
         <div className={`home-section py-5 d-flex align-items-center ${bg ? "bg-white" : ""}`}>
             <div className="page-container">
@@ -15,7 +17,7 @@ const HomeSection = (props) => {
                         <span className='text-muted'>
                             {content}
                         </span>
-                        <button>{button}</button>
+                        <button onClick={() => navigate('/shop')}>{button}</button>
                     </div>
                 </div>
             </div>
