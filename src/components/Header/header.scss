@@ -80,30 +80,37 @@ header {
                 }
 
 
-                a {
-                    width: 22px;
-                    height: 22px;
+
+                button {
+                    @include button;
+                    @include flexCenter;
+                    padding: 0 !important;
                     position: relative;
-                    text-decoration: none;
-                    @include flex;
-                    color: $bold-gray;
 
-                    svg {
-                        @include imgCover;
-                    }
+                    a {
+                        text-decoration: none;
+                        @include flex;
+                        color: $bold-gray;
 
-                    .cart-quantity {
-                        @include flexCenter;
-                        position: absolute;
-                        width: 15px;
-                        height: 15px;
-                        font-size: 10px;
-                        color: $white;
-                        top: -7px;
-                        right: -7px;
-                        border-radius: 50%;
-                        background-color: $main-cyan;
+                        svg {
+                            @include imgCover;
+                            width: 22px;
+                            height: 22px;
+                        }
                     }
+                }
+
+                .cart-quantity {
+                    @include flexCenter;
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    font-size: 10px;
+                    color: $white;
+                    top: -7px;
+                    right: -7px;
+                    border-radius: 50%;
+                    background-color: $main-cyan;
                 }
             }
 

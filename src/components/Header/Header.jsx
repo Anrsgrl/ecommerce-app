@@ -40,10 +40,10 @@ const Header = () => {
                         <NavLink to="/favorites">Favorites</NavLink >
                     </div>
                     <div className="icon-part">
-                        <NavLink to="/cart">
-                            <AiOutlineShoppingCart />
+                        <button onClick={() => setHamburger(false)}>
+                            <NavLink to="/cart"><AiOutlineShoppingCart /> </NavLink>
                             <span className='cart-quantity'>{getTotalQuantity()}</span>
-                        </NavLink>
+                        </button>
                     </div>
                     <div className="hamburger-menu">
                         <button onClick={() => setHamburger(!hamburger)} className='hamburger-button'><CiMenuFries /></button>
